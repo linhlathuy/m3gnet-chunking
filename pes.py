@@ -144,7 +144,6 @@ class Potential(nn.Module, IOMixIn):
             * torch.repeat_interleave(lattice, g.batch_num_nodes(), dim=0)
         ).sum(dim=1)
         g.ndata["pos"].requires_grad_(True)
-        # l_g = create_line_graph(g, 4)
         l_g = None if self.use_edges is False else None
         total_energies = self.model(g=g, state_attr=state_attr, l_g=l_g)
         total_energies = self.data_std * total_energies + self.data_mean
