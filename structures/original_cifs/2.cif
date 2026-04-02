@@ -1,0 +1,37 @@
+data_image0
+_chemical_formula_structural       K3NbO8
+_chemical_formula_sum              "K3 Nb1 O8"
+_cell_length_a       6.1868261
+_cell_length_b       6.1868264900000005
+_cell_length_c       6.18682628
+_cell_angle_alpha    102.64734483
+_cell_angle_beta     112.98717562
+_cell_angle_gamma    112.98719231999999
+
+_space_group_name_H-M_alt    "P 1"
+_space_group_IT_number       1
+
+loop_
+  _space_group_symop_operation_xyz
+  'x, y, z'
+
+loop_
+  _atom_site_type_symbol
+  _atom_site_label
+  _atom_site_symmetry_multiplicity
+  _atom_site_fract_x
+  _atom_site_fract_y
+  _atom_site_fract_z
+  _atom_site_occupancy
+  K   K1        1.0  0.5  0.25  0.7500000000000001  1.0000
+  K   K2        1.0  0.5  0.75  0.24999999999999994  1.0000
+  K   K3        1.0  0.0  0.5  0.5  1.0000
+  Nb  Nb1       1.0  0.0  0.0  0.0  1.0000
+  O   O1        1.0  0.57063894  0.80663396  0.80663396  1.0000
+  O   O2        1.0  0.0  0.19336604  0.7640049800000001  1.0000
+  O   O3        1.0  0.0  0.76400498  0.19336604000000002  1.0000
+  O   O4        1.0  0.42936105999999996  0.23599501999999997  0.23599502  1.0000
+  O   O5        1.0  0.28532189  0.3352944  0.33529440000000005  1.0000
+  O   O6        1.0  0.0  0.6647056  0.95002649  1.0000
+  O   O7        1.0  0.0  0.95002649  0.6647056  1.0000
+  O   O8        1.0  0.71467811  0.04997351  0.04997350999999998  1.0000
