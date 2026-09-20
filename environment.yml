@@ -1,0 +1,34 @@
+# The environment these models were trained and run in.
+#
+#   conda env create -f environment.yml
+#   conda activate m3gnet-fixed
+#   pytest tests/ -q                     # 20 tests, a few minutes
+#
+# GPU. The pins below install the CPU/CUDA-12.1 wheel of torch from PyPI, which
+# is what these runs used. On a machine with a different CUDA, install torch
+# first from https://pytorch.org for your version, then create the environment
+# with the torch line removed -- everything else is CUDA-independent.
+#
+# matgl 4.0.2 is the version the models were trained and evaluated against.
+# Every matgl release from v0.1.0 to v4.0.3 carries the three-body index defect
+# this package corrects, so there is nothing to "upgrade past the bug" to. The
+# correction lives here -- in m3gnet_fixed/pruning.py, applied at inference, or
+# in m3gnet_threebody_patch.py, applied to matgl itself. Moving to a later matgl
+# is fine only after checking that create_line_graph still returns a bundle with
+# kept_edge_ids, which is what both routes rely on.
+name: m3gnet-fixed
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - torch==2.5.1
+      - torch-geometric==2.7.0   # matgl 4.x is the PyG port; chunking uses Data directly
+      - matgl==4.0.2
+      - ase==3.28.0
+      - pymatgen==2026.5.4
+      - numpy==2.4.4
+      - scipy==1.17.1
+      - lightning==2.6.1         # only to read the training checkpoints
+      - pytest==8.3.4            # only for tests/

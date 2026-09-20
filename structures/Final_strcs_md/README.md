@@ -1,1 +1,0 @@
-Naming rule of folder: {model}-{train_prune_percentage}-strs-{inference_prune_percentage}

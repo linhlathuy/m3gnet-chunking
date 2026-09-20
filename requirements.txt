@@ -1,0 +1,16 @@
+# pip route; see environment.yml for the conda one and for the GPU note.
+#
+# For a CUDA build of torch, install it first from https://pytorch.org, e.g.
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+# then `pip install -r requirements.txt` (pip will keep the torch you have).
+#
+# matgl is pinned to 4.0.2 deliberately. See the note in environment.yml.
+torch==2.5.1
+torch-geometric==2.7.0
+matgl==4.0.2
+ase==3.28.0
+pymatgen==2026.5.4
+numpy==2.4.4
+scipy==1.17.1
+lightning==2.6.1
+pytest==8.3.4

@@ -1,0 +1,101 @@
+{
+  "name": "M3GNet multi-target regression, corrected three-body index space (fold 0)",
+  "task": "multi-target property regression",
+  "targets": [
+    {
+      "name": "eform",
+      "unit": "eV/atom"
+    },
+    {
+      "name": "bandgap",
+      "unit": "eV"
+    },
+    {
+      "name": "log10_G_VRH",
+      "unit": "log10(GPa)"
+    },
+    {
+      "name": "log10_K_VRH",
+      "unit": "log10(GPa)"
+    }
+  ],
+  "source_checkpoint": "best-0196.ckpt",
+  "source_checkpoint_md5": "5bf433d55d33151bbee210c3342aa695",
+  "exported": "2026-09-09",
+  "exported_by": "tools/export_regression.py",
+  "epoch": 196,
+  "global_step": 347508,
+  "architecture": {
+    "element_types": 89,
+    "is_intensive": true,
+    "readout_type": "set2set",
+    "ntargets": 4,
+    "units": 64,
+    "nblocks": 3,
+    "cutoff": 5.0,
+    "threebody_cutoff": 4.0
+  },
+  "n_parameters": 391967,
+  "n_tensors_verified": 113,
+  "line_graph_index_space": "fixed (full parent-bond)",
+  "REQUIRED_WIRING": "MUST be evaluated with the three-body index fix active -- either m3gnet_threebody_patch.install() or the wiring='fixed' path in m3gnet_fixed. These weights were fitted in the corrected index space; evaluating them under stock matgl is off-distribution.",
+  "run_metrics": {
+    "fold": 0,
+    "prune_level": 0.0,
+    "stratify": true,
+    "targets": [
+      "eform",
+      "bandgap",
+      "log10_G_VRH",
+      "log10_K_VRH"
+    ],
+    "best_val_loss": 0.0830787792801857,
+    "best_checkpoint": "best-0196.ckpt",
+    "epochs_run": 247,
+    "early_stopped": true,
+    "results": {
+      "test_prune_0.0": {
+        "test/loss": 0.09919663518667221,
+        "test/loss_eform": 0.01424611546099186,
+        "test/loss_bandgap": 0.11105078458786011,
+        "test/loss_log10_G_VRH": 0.15867847204208374,
+        "test/loss_log10_K_VRH": 0.12917663156986237,
+        "test/triples_total": 75319464.0,
+        "test/triples_per_struct": 10673.0146484375,
+        "test/triples_per_bond": 9.822072982788086,
+        "test/triples_keep_frac": 1.0,
+        "test/mae_eform": 0.07495934516191483,
+        "test/rmse_eform": 0.12804296612739563,
+        "test/mae_bandgap": 0.29016271233558655,
+        "test/rmse_bandgap": 0.5419209599494934,
+        "test/mae_log10_G_VRH": 0.0897054597735405,
+        "test/rmse_log10_G_VRH": 0.13748332858085632,
+        "test/mae_log10_K_VRH": 0.06959155946969986,
+        "test/rmse_log10_K_VRH": 0.12265098094940186,
+        "test/mae_mean": 0.13110476732254028,
+        "test/rmse_mean": 0.232524573802948
+      },
+      "test_prune_1.0": {
+        "test/loss": 0.29235851764678955,
+        "test/loss_eform": 0.10253158956766129,
+        "test/loss_bandgap": 0.6616179943084717,
+        "test/loss_log10_G_VRH": 0.24009978771209717,
+        "test/loss_log10_K_VRH": 0.15766386687755585,
+        "test/triples_total": 0.0,
+        "test/triples_per_struct": 0.0,
+        "test/triples_per_bond": 0.0,
+        "test/triples_keep_frac": 0.0,
+        "test/mae_eform": 0.2530612051486969,
+        "test/rmse_eform": 0.3430466949939728,
+        "test/mae_bandgap": 0.7780436277389526,
+        "test/rmse_bandgap": 1.321730613708496,
+        "test/mae_log10_G_VRH": 0.11848209798336029,
+        "test/rmse_log10_G_VRH": 0.16792245209217072,
+        "test/mae_log10_K_VRH": 0.08549775928258896,
+        "test/rmse_log10_K_VRH": 0.1376839429140091,
+        "test/mae_mean": 0.30877116322517395,
+        "test/rmse_mean": 0.492595911026001
+      }
+    }
+  }
+}
